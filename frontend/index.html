@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CogniDiary - Smart Diary App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧠 CogniDiary</h1>
+            <p>Your smart diary with speech recognition and mood detection</p>
+        </header>
+
+        <main>
+            <!-- Camera Section -->
+            <section class="camera-section">
+                <h2>📷 Mood Detection</h2>
+                <div class="camera-container">
+                    <video id="videoElement" autoplay muted></video>
+                    <canvas id="canvasElement" style="display: none;"></canvas>
+                    <div class="camera-controls">
+                        <button id="startCamera" class="btn btn-primary">Start Camera</button>
+                        <button id="capturePhoto" class="btn btn-secondary" disabled>Capture Mood</button>
+                        <button id="stopCamera" class="btn btn-danger" disabled>Stop Camera</button>
+                    </div>
+                    <div id="moodResult" class="mood-result"></div>
+                </div>
+            </section>
+
+            <!-- Speech to Text Section -->
+            <section class="speech-section">
+                <h2>🎤 Speech to Text</h2>
+                <div class="speech-controls">
+                    <button id="startRecording" class="btn btn-primary">Start Recording</button>
+                    <button id="stopRecording" class="btn btn-danger" disabled>Stop Recording</button>
+                    <div id="recordingStatus" class="recording-status"></div>
+                </div>
+            </section>
+
+            <!-- Diary Entry Section -->
+            <section class="diary-section">
+                <h2>📝 Diary Entry</h2>
+                <form id="diaryForm">
+                    <div class="form-group">
+                        <label for="entryTitle">Title (Optional):</label>
+                        <input type="text" id="entryTitle" placeholder="Enter a title for your entry...">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="entryText">Your Thoughts:</label>
+                        <textarea id="entryText" rows="10" placeholder="Write your diary entry here or use speech-to-text..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="detectedMood">Detected Mood:</label>
+                        <input type="text" id="detectedMood" readonly placeholder="Mood will appear here after photo capture">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" id="clearEntry" class="btn btn-secondary">Clear</button>
+                        <button type="submit" class="btn btn-success">Save Entry</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Status Messages -->
+            <div id="statusMessage" class="status-message"></div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

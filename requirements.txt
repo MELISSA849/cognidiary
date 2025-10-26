@@ -1,0 +1,65 @@
+# CogniDiary - Smart Diary Application Requirements
+# Python dependencies for speech recognition, mood detection, and web API
+
+# Web Framework
+Flask==2.3.3
+Flask-CORS==4.0.0
+
+# Speech Recognition
+SpeechRecognition==3.10.0
+pydub==0.25.1
+pyaudio==0.2.11
+
+# Computer Vision and Mood Detection
+opencv-python==4.8.1.78
+fer==22.5.1
+tensorflow==2.13.0
+mtcnn==0.1.1
+
+# Image Processing
+Pillow==10.0.1
+numpy==1.24.3
+
+# Audio Processing (additional codecs)
+ffmpeg-python==0.2.0
+
+# Offline Speech Recognition (fallback)
+pocketsphinx==0.1.15
+
+# HTTP and API utilities
+requests==2.31.0
+urllib3==2.0.4
+
+# Date and Time utilities (included in standard library but listed for clarity)
+# datetime - built-in
+# json - built-in
+# os - built-in
+# logging - built-in
+# tempfile - built-in
+# io - built-in
+# glob - built-in
+# re - built-in
+
+# Development and Testing (optional)
+pytest==7.4.2
+pytest-flask==1.2.0
+
+# Note: Some packages may require system-level dependencies:
+# 
+# For Windows:
+# - Visual Studio Build Tools (for compiling some packages)
+# - FFmpeg (for audio processing)
+# - Microsoft Visual C++ Redistributable
+#
+# For Ubuntu/Debian:
+# sudo apt-get update
+# sudo apt-get install python3-dev portaudio19-dev ffmpeg
+# sudo apt-get install libopencv-dev python3-opencv
+#
+# For macOS:
+# brew install portaudio ffmpeg
+# 
+# Additional Notes:
+# - pyaudio may require manual installation on some systems
+# - tensorflow will automatically install CPU version, for GPU support install tensorflow-gpu
+# - Some packages may have compatibility issues, versions specified are tested combinations
