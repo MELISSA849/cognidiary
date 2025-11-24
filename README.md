@@ -1,6 +1,6 @@
-# 🧠 CogniDiary - Smart Diary Application
+# 📝 SmartDiary - Intelligent Diary Application
 
-CogniDiary is an intelligent diary application that combines speech-to-text functionality with mood detection through facial recognition. Users can create diary entries using voice input, and the application automatically detects their mood through camera analysis.
+SmartDiary is an intelligent diary application that combines speech-to-text functionality with mood detection through facial recognition. Users can create diary entries using voice input, and the application automatically detects their mood through camera analysis.
 
 ## ✨ Features
 
@@ -16,7 +16,7 @@ CogniDiary is an intelligent diary application that combines speech-to-text func
 ## 🏗️ Project Structure
 
 ```
-cognidiary/
+smartdiary/
 ├── frontend/                 # Web application frontend
 │   ├── index.html           # Main HTML interface
 │   ├── style.css            # Styling and layout
@@ -43,7 +43,7 @@ cognidiary/
 
 1. **Clone or download the project**
    ```bash
-   cd cognidiary
+   cd smartdiary
    ```
 
 2. **Set up Python virtual environment**
@@ -227,7 +227,7 @@ pip install flask flask-cors pillow numpy
 
 ## 🤝 Contributing
 
-Feel free to contribute to CogniDiary by:
+Feel free to contribute to SmartDiary by:
 - Reporting bugs
 - Suggesting new features
 - Improving documentation
@@ -256,4 +256,4 @@ If you encounter any issues or have questions:
 
 ---
 
-**Happy journaling with CogniDiary! 📖✨**
+**Happy journaling with SmartDiary! 📖✨**

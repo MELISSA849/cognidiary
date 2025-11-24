@@ -1,65 +1,40 @@
-# CogniDiary - Smart Diary Application Requirements
-# Python dependencies for speech recognition, mood detection, and web API
+# SmartDiary - Standalone Intelligent Diary Application
+# Minimal dependencies for maximum compatibility and efficiency
+# No external heavy dependencies like TensorFlow or complex ML frameworks
 
-# Web Framework
-Flask==2.3.3
+# Core Web Framework (lightweight, stable versions)
+Flask==3.0.0
 Flask-CORS==4.0.0
+Werkzeug==3.0.1
 
-# Speech Recognition
+# Basic Image Processing (lightweight, no heavy ML)
+Pillow==10.1.0
+opencv-python-headless==4.8.1.78
+numpy==1.26.2
+
+# Speech Recognition (primarily uses browser APIs, minimal backend)
 SpeechRecognition==3.10.0
-pydub==0.25.1
-pyaudio==0.2.11
 
-# Computer Vision and Mood Detection
-opencv-python==4.8.1.78
-fer==22.5.1
-tensorflow==2.13.0
-mtcnn==0.1.1
+# All other functionality uses built-in Python modules:
+# - datetime, json, os, logging, tempfile, io, glob, re, base64
+# - Simple emotion detection using OpenCV Haar Cascades (built-in)
 
-# Image Processing
-Pillow==10.0.1
-numpy==1.24.3
+# Development Tools (optional, commented out)
+# pytest==7.4.3
+# black==23.11.0
 
-# Audio Processing (additional codecs)
-ffmpeg-python==0.2.0
-
-# Offline Speech Recognition (fallback)
-pocketsphinx==0.1.15
-
-# HTTP and API utilities
-requests==2.31.0
-urllib3==2.0.4
-
-# Date and Time utilities (included in standard library but listed for clarity)
-# datetime - built-in
-# json - built-in
-# os - built-in
-# logging - built-in
-# tempfile - built-in
-# io - built-in
-# glob - built-in
-# re - built-in
-
-# Development and Testing (optional)
-pytest==7.4.2
-pytest-flask==1.2.0
-
-# Note: Some packages may require system-level dependencies:
-# 
-# For Windows:
-# - Visual Studio Build Tools (for compiling some packages)
-# - FFmpeg (for audio processing)
-# - Microsoft Visual C++ Redistributable
+# Installation Notes:
+# ----------------
+# This version is standalone and doesn't require:
+# - TensorFlow, PyTorch, or other heavy ML frameworks
+# - External audio codecs (ffmpeg, pyaudio)
+# - System-level dependencies
+# - Compilation tools
 #
-# For Ubuntu/Debian:
-# sudo apt-get update
-# sudo apt-get install python3-dev portaudio19-dev ffmpeg
-# sudo apt-get install libopencv-dev python3-opencv
+# All features work using:
+# - Browser native speech recognition API
+# - OpenCV built-in Haar Cascades for face detection
+# - Simple rule-based emotion analysis
+# - Pure Python implementations where possible
 #
-# For macOS:
-# brew install portaudio ffmpeg
-# 
-# Additional Notes:
-# - pyaudio may require manual installation on some systems
-# - tensorflow will automatically install CPU version, for GPU support install tensorflow-gpu
-# - Some packages may have compatibility issues, versions specified are tested combinations
+# Install with: pip install -r requirements.txt
